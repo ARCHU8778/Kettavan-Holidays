@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Services | Kettavan Holidays</title>
+<style>
+:root{
+    --dark:#071a2b;
+    --cyan:#00c8d7;
+    --light:#e9fdff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+}
+
+/* ===== HERO ===== */
+.hero{
+    min-height:50vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px;
+    background:
+        linear-gradient(rgba(7,26,43,0.8), rgba(0,60,93,0.8)),
+        url("bus-hero.jpg") center/cover no-repeat;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:48px;
+    color:#fff;
+}
+
+.hero span{
+    color:var(--cyan);
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:18px;
+    color:var(--light);
+    line-height:1.5;
+    max-width:600px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* ===== SERVICES CARDS ===== */
+.services{
+    padding:50px 40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.05);
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    border-left:4px solid var(--cyan);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    background:rgba(0,200,215,0.1);
+}
+
+.card h3{
+    margin:15px 0 10px;
+    color:var(--cyan);
+    font-size:20px;
+}
+
+.card p{
+    color:#ddd;
+    font-size:15px;
+    line-height:1.5;
+}
+
+/* ICONS */
+.card i{
+    font-size:40px;
+    color:var(--cyan);
+}
+
+/* ===== STRIP ===== */
+.strip{
+    background:linear-gradient(90deg,var(--cyan),#009fb2);
+    color:#002b36;
+    padding:25px 40px;
+    text-align:center;
+    font-size:16px;
+    font-weight:600;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:15px;
+    background:#020d18;
+    font-size:14px;
+    opacity:.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+    .hero h1{
+        font-size:36px;
+    }
+    .services{
+        padding:30px 20px;
+        gap:15px;
+    }
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Our <span>Bus Services</span></h1>
+        <p>Comfortable, safe, and memorable journeys for every traveler.</p>
+    </div>
+</section>
+
+<!-- SERVICES CARDS -->
+<section class="services">
+    <div class="card">
+        <i class="fas fa-bus"></i>
+        <h3>Luxury Coaches</h3>
+        <p>Spacious, air-conditioned coaches with comfortable seating for long trips.</p>
+    </div>
+    <div class="card">
+        <i class="fas fa-route"></i>
+        <h3>City & Tour Routes</h3>
+        <p>Well-planned city tours and scenic routes covering all popular destinations.</p>
+    </div>
+    <div class="card">
+        <i class="fas fa-user-shield"></i>
+        <h3>Safe Travel</h3>
+        <p>Experienced drivers and strict safety protocols for worry-free journeys.</p>
+    </div>
+    <div class="card">
+        <i class="fas fa-clock"></i>
+        <h3>Punctual Schedules</h3>
+        <p>On-time departures and arrivals for every trip, no unnecessary delays.</p>
+    </div>
+</section>
+
+<!-- STRIP -->
+<section class="strip">
+    ✔ Trusted Bus Operator | ✔ Comfortable Coaches | ✔ Safe & Timely Trips
+</section>
+
+<footer>
+    © 2026 Kettavan Holidays
+</footer>
+
+</body>
+</html>
