@@ -27,6 +27,6 @@ public class BookingServlet extends HttpServlet {
         new BookingDAOImpl().addBooking(b);
 
         // redirect to servlet, NOT JSP
-        res.sendRedirect("ThankYou.html");
+        res.sendRedirect("ThankYou.jsp");
     }
 }
