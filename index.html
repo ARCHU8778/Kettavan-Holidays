@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kettavan Holidays</title>
+
+<style>
+:root {
+    --dark: #071a2b;
+    --blue: #0b3c5d;
+    --cyan: #00c8d7;
+    --glass: rgba(255,255,255,0.14);
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    color: white;
+    overflow-x: hidden;
+    background: black;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    background: linear-gradient(90deg, rgba(2,13,24,0.95), rgba(7,26,43,0.95));
+    box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+}
+
+.navbar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 45px;
+}
+
+.navbar h1 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: var(--cyan);
+    display: flex;
+    align-items: center;
+}
+
+.navbar h1 .logo {
+    width: 200px;        /* adjust size as needed */
+    height: auto;
+    margin-right: 10px; /* space between logo and text */
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 35px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--cyan);
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+/* HERO WITH BACKGROUND IMAGE */
+.hero {
+    min-height: 100vh;
+    margin-top: 70px;
+    padding: 90px 60px 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background:
+        linear-gradient(
+            rgba(7,26,43,0.85),
+            rgba(11,60,93,0.85)
+        ),
+        url("travel-bg.jpg") center/cover no-repeat;
+    overflow: hidden;
+}
+
+/* HERO CONTENT */
+.hero-content {
+    max-width: 650px;
+    z-index: 5;
+}
+
+.hero-content h2 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.1;
+    background: linear-gradient(90deg, white, var(--cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    margin: 22px 0;
+    font-size: 20px;
+    color: #e6f9fc;
+}
+
+.hero-content .btn {
+    background: var(--cyan);
+    color: #002b36;
+    padding: 15px 38px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.hero-content .btn:hover {
+    transform: scale(1.08);
+}
+
+/* BUS IMAGE */
+.bus {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 560px;
+    filter: drop-shadow(0 35px 50px rgba(0,0,0,0.8));
+    animation: float 4s infinite ease-in-out;
+    z-index: 4;
+}
+
+@keyframes float {
+    0% { transform: translateY(-50%) translateY(0); }
+    50% { transform: translateY(-50%) translateY(-18px); }
+    100% { transform: translateY(-50%) translateY(0); }
+}
+
+/* BUS GLOW */
+.hero-glow {
+    position: absolute;
+    right: -160px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(0,200,215,0.4), transparent 70%);
+    z-index: 2;
+}
+
+/* GLASS INFO */
+.glass {
+    width: 92%;
+    margin: -90px auto 60px;
+    padding: 45px;
+    border-radius: 30px;
+    background: var(--glass);
+    backdrop-filter: blur(22px);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.7);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border-radius: 22px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-14px);
+    background: rgba(255,255,255,0.3);
+}
+
+.card h3 {
+    color: var(--cyan);
+    margin-bottom: 12px;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="navbar">
+        <h1>
+            <img src="Logo.png" class="logo">
+           
+        </h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="adminlogin.jsp" class="admin-btn">Admin Login</a></li> 
+        </ul>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h2>KETTAVAN<br>HOLIDAYS</h2>
+        <p>Premium Tourist & Student Travel Experiences Across India</p>
+        <a href="booking.html" class="btn">Start Your Journey</a>
+    </div>
+
+    <div class="hero-glow"></div>
+    <img src="redBus.png" class="bus" alt="Tourist Bus">
+</section>
+
+<!-- INFO -->
+<section class="glass" id="info">
+    <div class="grid">
+        <div class="card">
+            <h3>About Us</h3>
+            <p>
+                Kettavan Holidays delivers premium tourist transport with
+                safety, luxury, and affordability at its core.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Student Tours</h3>
+            <p>
+                Educational tours, industrial visits, and college trips
+                handled professionally.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Luxury Fleet</h3>
+            <p>
+                AC sleeper & semi-sleeper buses with experienced drivers.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Custom Packages</h3>
+            <p>
+                Flexible travel plans designed for every group size.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="glass contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>📧 kettavanholidays@gmail.com</p>
+    <p>📞 +91 9626992020</p>
+    <p>📍 Dharmapuri, Tamil Nadu</p>
+</section>
+
+<footer>
+    © 2026 Kettavan Holidays | All Rights Reserved
+</footer>
+
+</body>
+</html>
