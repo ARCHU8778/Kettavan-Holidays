@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Us | Kettavan Holidays</title>
+<style>
+:root{
+    --dark:#071a2b;
+    --blue:#0b3c5d;
+    --cyan:#00c8d7;
+    --light:#e9fdff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+}
+
+/* ================= HERO ================= */
+.hero{
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:60px;
+    background:
+        linear-gradient(rgba(7,26,43,0.75), rgba(11,60,93,0.75)),
+        url("about-bg.jpg") center/cover no-repeat;
+    position:relative;
+}
+
+.hero-content{
+    text-align:center;
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:64px;
+    color:#fff;
+    line-height:1.2;
+}
+
+.hero span{
+    color:var(--cyan);
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:20px;
+    color:var(--light);
+    line-height:1.6;
+}
+
+/* BUTTON */
+.hero .btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 30px;
+    background:var(--cyan);
+    color:#002b36;
+    font-weight:600;
+    border-radius:30px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.hero .btn:hover{
+    background:#009fb2;
+    color:#fff;
+}
+
+/* ================= STORY ================= */
+.story{
+    padding:80px 60px 40px;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:40px;
+    background:#000;
+}
+
+.story h2{
+    font-size:38px;
+    color:var(--cyan);
+}
+
+.story p{
+    font-size:18px;
+    line-height:1.7;
+    margin-top:15px;
+    color:#ddd;
+}
+
+.highlight{
+    background:linear-gradient(135deg,var(--cyan),#009fb2);
+    color:#002b36;
+    padding:35px;
+    border-radius:20px;
+    font-size:18px;
+}
+
+/* ================= STRIP ================= */
+.strip{
+    background:linear-gradient(90deg,var(--cyan),#00a6b8);
+    color:#002b36;
+    padding:50px 60px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    text-align:center;
+    font-weight:600;
+}
+
+.strip div{
+    font-size:20px;
+}
+
+/* ================= VALUES ================= */
+.values{
+    padding:70px 60px;
+    background:
+        radial-gradient(circle at top right,rgba(0,200,215,.25),transparent 40%),
+        #000;
+}
+
+.values h2{
+    font-size:40px;
+    color:var(--cyan);
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.12);
+    padding:30px;
+    border-radius:18px;
+    border-left:4px solid var(--cyan);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    background:rgba(0,200,215,0.1);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:var(--cyan);
+    font-size:22px;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020d18;
+    font-size:14px;
+    opacity:.8;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+    .story{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>More Than Travel.<br><span>A Responsibility.</span></h1>
+        <p>
+            Kettavan Holidays is built around trust, discipline,
+            and the belief that every journey should feel safe,
+            meaningful, and memorable.
+        </p>
+        <a href="#story" class="btn">Learn More</a>
+    </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+    <div>
+        <h2>Our Foundation</h2>
+        <p>
+            We started with one clear goal — to organize travel the right way.
+            Careful planning, trained professionals, and respect for every traveler
+            shaped our approach from day one.
+        </p>
+        <p>
+            Growth followed naturally when customers experienced
+            consistency, punctuality, and accountability.
+        </p>
+    </div>
+
+    <div class="highlight">
+        We don’t just move people between destinations.
+        We manage responsibility, safety, and expectations — 
+        every single trip.
+    </div>
+</section>
+
+<!-- STRIP -->
+<section class="strip">
+    <div>✔ Disciplined Operations</div>
+    <div>✔ Customer-First Planning</div>
+    <div>✔ Trusted Travel Partner</div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+    <h2>What Drives Us</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Integrity</h3>
+            <p>Transparent communication and honest commitments.</p>
+        </div>
+        <div class="card">
+            <h3>Safety</h3>
+            <p>Vehicles, routes, and teams prepared with care.</p>
+        </div>
+        <div class="card">
+            <h3>Reliability</h3>
+            <p>Every schedule and promise matters.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Kettavan Holidays
+</footer>
+
+</body>
+</html>
