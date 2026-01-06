@@ -158,10 +158,12 @@ h2{
 function handleBooking() {
     if (location.hostname.includes("github.io")) {
         alert("Booking feature works on server (Tomcat). GitHub Pages shows frontend only.");
-    } else {
-        document.getElementById("bookingForm").submit();
+        return false; 
     }
+    return true; 
 }
+</script>
+
 </script>
 
 </body>
