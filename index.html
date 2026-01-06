@@ -54,9 +54,9 @@ header {
 }
 
 .navbar h1 .logo {
-    width: 200px;
+    width: 200px;        /* adjust size as needed */
     height: auto;
-    margin-right: 10px;
+    margin-right: 10px; /* space between logo and text */
 }
 
 .navbar ul {
@@ -229,7 +229,8 @@ footer {
 <header>
     <div class="navbar">
         <h1>
-            <img src="Logo.png" class="logo">Kettavan
+            <img src="Logo.png" class="logo">
+           
         </h1>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -237,11 +238,7 @@ footer {
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="#contact">Contact</a></li>
-
-            <!-- Admin login with smart alert -->
-            <li>
-                <a href="adminlogin.jsp" onclick="return handleAdminLogin();">Admin Login</a>
-            </li>
+            <li><a href="adminlogin.jsp" class="admin-btn">Admin Login</a></li> 
         </ul>
     </div>
 </header>
@@ -251,11 +248,11 @@ footer {
     <div class="hero-content">
         <h2>KETTAVAN<br>HOLIDAYS</h2>
         <p>Premium Tourist & Student Travel Experiences Across India</p>
-        <a href="booking.html" class="btn" onclick="return handleBooking();">Start Your Journey</a>
+        <a href="booking.html" class="btn">Start Your Journey</a>
     </div>
 
     <div class="hero-glow"></div>
-    <img src="redBus.jpeg" class="bus" alt="Tourist Bus">
+    <img src="redBus.png" class="bus" alt="Tourist Bus">
 </section>
 
 <!-- INFO -->
@@ -304,17 +301,6 @@ footer {
 <footer>
     © 2026 Kettavan Holidays | All Rights Reserved
 </footer>
-
-<!-- Scripts -->
-<script>
-function handleAdminLogin() {
-    if(location.hostname.includes("github.io")){
-        alert("Admin login works on Tomcat server only. GitHub Pages shows frontend demo.");
-        return false; // stop navigation
-    }
-    return true; // allow on server
-}
-</script>
 
 </body>
 </html>
